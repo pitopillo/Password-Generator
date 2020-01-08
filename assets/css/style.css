@@ -1,0 +1,59 @@
+
+body{
+    background-color: cornflowerblue;
+}
+
+h1{
+    text-align: center;
+    padding-top: 75px;
+}
+
+.row{
+    align-content: center;
+    padding-left: 80px;
+    padding-top: 25px;
+}
+
+
+.card{
+    width: 900px;
+    height: 400px;
+    background-color: white;
+    padding-left: 10px;
+}
+
+h3{
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
+#pwbox{
+    width: 880px;
+    height: 200px;
+    text-align: center;
+    padding-top: 60px;
+    background-color: chartreuse;
+    border: dashed 6px grey;
+}
+
+.btnarea{
+    padding-left: 300px;
+    padding-bottom: 20px;
+}
+
+
+.btn-primary{
+    background-color: darkred;
+    color: white;
+    border-radius: 50px;
+    border-right: 15px;
+}
+
+.btn-secondary{
+    height: ;
+    width: ;
+    background-color: gray;
+    color: white;
+    border-radius: 50px;
+}
+
