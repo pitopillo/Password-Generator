@@ -3,11 +3,11 @@ var pw;
 
 var pwLenght = 8-128;
 
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-var Special = ["!", "#", "$", "%", "&", ":", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "{", "}", "~"];
+var special = ["!", "#", "$", "%", "&", ":", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "{", "}", "~"];
 
 var number = 123456789;
 
@@ -16,21 +16,56 @@ var number = 123456789;
 var pw;
 
 // declare a variable to contain the password length.
-var pwLength = 8-128;
+var pwLength;
 
 //Special value declared
-var isSpecialChars;
+var isSpecial;
 //Number value declared
-var isNumericChars;
+var isNumber;
 //Lowercase value declared
-var isLowercaseChars;
+var isLower;
 //Uppercase value declared
-var isUppercaseChars;
+var isUpper;
 
 function generatePw() {
-    prompt("How long would you like this password?")
+    pw = prompt("How long would you like this password?")
     
-    if (pwLenght < 8 || pwLenght < 128) alert("Password needs to be 8-128 characters");
-   
-     (pwLenght = NaN) alert ("Needs to be a number");
-}
+    if (isNaN(pw)); {
+        alert("Please enter a number!");
+        pw = 0;
+    pw = prompt("How long would you like this password?")
+    }
+    
+    if (pw < 8 || pw > 128) 
+    {
+        alert("Password needs to be 8-128 characters");
+    }
+
+    else
+        var a = confirm("Include Specials?");
+        if (a == true) {
+            pw == special
+        } 
+         
+        var pw = confirm("Include Lower Case?");
+        if (pw == true) {
+           pw == lower
+        }
+        
+        var pw = confirm("Include Upper Case?");
+        if (pw == true) {
+           pw ==  upper
+        }
+
+        var d = confirm("Include Numbers?");
+        if (d == true) {
+          pw == number
+        }
+        
+        else 
+        (pw != IsSpecial && lower != isLower && upper != isUpper && number != isNumber)
+        {
+            alert("Must include one type of character");
+        }
+    }
+
