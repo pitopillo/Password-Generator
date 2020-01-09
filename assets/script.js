@@ -1,7 +1,6 @@
-//Variables to use for the password
 var pw;
 
-var pwLenght = 8-128;
+var pwLenght;
 
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -10,13 +9,6 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var special = ["!", "#", "$", "%", "&", ":", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "{", "}", "~"];
 
 var number = 123456789;
-
-
-// declar a variable to contain the password.
-var pw;
-
-// declare a variable to contain the password length.
-var pwLength;
 
 //Special value declared
 var isSpecial;
@@ -27,45 +19,38 @@ var isLower;
 //Uppercase value declared
 var isUpper;
 
+  function  getRandomFromArray(arr) { return arr[Math.random()] }
+
 function generatePw() {
-    pw = prompt("How long would you like this password?")
-    
-    if (isNaN(pw)); {
-        alert("Please enter a number!");
-        pw = 0;
-    pw = prompt("How long would you like this password?")
-    }
-    
-    if (pw < 8 || pw > 128) 
+    pwLength = prompt("How long would you like this password?")
+    if (pwLength < 8 || pwLength > 128) 
     {
         alert("Password needs to be 8-128 characters");
     }
-
-    else
-        var a = confirm("Include Specials?");
+    else 
+    {
+        var a = confirm("Include Special?");
         if (a == true) {
-            pw == special
-        } 
-         
-        var pw = confirm("Include Lower Case?");
-        if (pw == true) {
-           pw == lower
+            a = special
+            getRandomFromArray(special)
+            console.log('a', a);
         }
-        
-        var pw = confirm("Include Upper Case?");
-        if (pw == true) {
-           pw ==  upper
+        var b = confirm("Include Upper Case?");
+        if (b == true) {
+            b = upper
+            getRandomFromArray(upper)
+        }
+        var c = confirm("Include Lower Case?");
+        if (c == true) {
+            c = lower
+            getRandomFromArray(lower)
         }
 
-        var d = confirm("Include Numbers?");
+        var d = confirm("Include Number?")
         if (d == true) {
-          pw == number
-        }
-        
-        else 
-        (pw != IsSpecial && lower != isLower && upper != isUpper && number != isNumber)
-        {
-            alert("Must include one type of character");
+            d = number
+            getRandomFromArray(number)
         }
     }
-
+}
+generatePw()

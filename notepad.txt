@@ -1,0 +1,4 @@
+User can create a password
+User is asked how long they would like the password to be
+User will be asked if they will like to include Lowercase/Uppercase/Special/Number by prompts
+User recieves result based on user input
